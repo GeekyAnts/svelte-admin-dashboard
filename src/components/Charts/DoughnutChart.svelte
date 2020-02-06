@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import Chart from "Chart.js";
+  import Chart from "chart.js";
 
   let description =
     "Donut Chart (also known as Doughnut chart) is a variation on a Pie chart except it has a round hole in the center which makes it look like a donut, hence the name. This empty space can be used to display additional data.";

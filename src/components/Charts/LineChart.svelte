@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import Chart from "Chart.js";
+  import Chart from "chart.js";
 
   let description =
     "A line chart is a graphical representation of an asset's historical price action that connects a series of data points with a continuous line. This is the most basic type of chart used in finance and typically only depicts a security's closing prices over time.";
