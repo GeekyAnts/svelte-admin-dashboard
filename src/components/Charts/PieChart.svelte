@@ -1,5 +1,5 @@
 <script>
-  import Chart from "Chart.js";
+  import Chart from "chart.js";
   import { onMount } from "svelte";
 
   let description =
