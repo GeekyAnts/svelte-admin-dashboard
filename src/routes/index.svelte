@@ -1,46 +1,77 @@
+<script>
+  import BarChart from "../components/Charts/BarChart.svelte";
+  import LineChart from "../components/Charts/LineChart.svelte";
+  import PieChart from "../components/Charts/PieChart.svelte";
+  import DoughnutChart from "../components/Charts/DoughnutChart.svelte";
+</script>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  p {
+    margin: 1em auto;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  .main {
+    flex: 1;
+    margin-left: 30px;
+    color: rgb(142, 141, 141);
+  }
+  .main-title {
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: rgb(94, 94, 94);
+  }
+  .charts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+  .inner-charts {
+    flex: 1;
+    flex-direction: row;
+  }
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
+  @media (max-width: 480px) {
+    .main {
+      flex: 1;
+      margin-top: 3rem;
+    }
+  }
 
-	p {
-		margin: 1em auto;
-	}
+  @media screen and (max-width: 640px) {
+    .inner-charts {
+      flex: 1;
+      flex-direction: column;
+    }
+  }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  @media screen and (min-width: 768px) {
+    .inner-charts {
+      flex: 1;
+      flex-direction: row;
+      display: inline-flex;
+    }
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Dashboard</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<div class="main">
+  <h4 class="main-title">DASHBOARD</h4>
+  <p>Welcome to the unique Material Design admin web app experience!</p>
+</div>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<div class="charts">
+  <div class="inner-charts">
+    <LineChart />
+    <PieChart />
+  </div>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+  <div class="inner-charts">
+    <DoughnutChart />
+    <BarChart />
+  </div>
+</div>
